@@ -2065,7 +2065,8 @@ classdef MyStructPop < handle
             end
             
             publish(fname, 'format', 'pdf','showCode',true);
-            movefile([cd '\html\' pdfname])
+            movefile([cd '\html\' pdfname]);
+            fclose fname; delete fname;
             open(pdfname);
         end
         
