@@ -936,7 +936,7 @@ classdef MyStructPop < handle
             legend([app.PPlot.Trj(Tags)]); %#ok<*NBRAK>
             % Update TrjListBx      
             app.TrajectoryListBox.String = sort(app.PhasePlaneAx.Legend.String);
-            app.TrajectoryListBox.Value = l;
+            app.TrajectoryListBox.Value = (1:length(app.TrajectoryListBox.String))*strcmp(app.TrajectoryListBox.String, num2str(l));
             % Ploting TP
             
             app.refreshTP;      
